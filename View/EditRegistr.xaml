@@ -1,0 +1,54 @@
+﻿<Window x:Class="Cupidon.View.EditRegistr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cupidon.View"
+        mc:Ignorable="d"
+        Title="EditRegistr" Height="600" Width="1000"
+        KeyDown="Window_KeyDown"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="#E1B4B6">
+    <Grid>
+        <Grid>
+            <Image Source="/Images/Rectangle 6.png" RenderTransformOrigin="0.303,0.905" Margin="89,74,47,10"/>
+            <TextBlock Text="Анкета" HorizontalAlignment="Left" FontSize="18" Foreground="#7E3749" FontWeight="Bold" Margin="432,25,0,545" RenderTransformOrigin="0.5,0.5"/>
+            <TextBlock Text="Личные данные" HorizontalAlignment="Left" FontSize="18" Foreground="#7E3749" Margin="457,96,0,474" />
+            <Button x:Name="ExitButtonRegistr" Content="Выход" Margin="0,570,875,0" Background="#E1B4B6" Foreground="#7E3749" FontWeight="Bold" FontSize="18" BorderBrush="{x:Null}" Height="30" VerticalAlignment="Top" Click="ExitButton_Click"></Button>
+            <TextBlock Text="Фамилия" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="128,135,0,440"/>
+            <TextBlock Text="Имя" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="128,175,0,410" RenderTransformOrigin="1.155,0.2"/>
+            <TextBlock Text="Отчество" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="128,215,0,355"/>
+            <TextBlock Text="Дата рождения" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="128,255,0,315"/>
+            <TextBlock Text="Пол" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="128,295,0,285"/>
+            <TextBlock Text="Рост" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="128,335,0,240"/>
+            <TextBlock Text="Вес" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="128,375,0,200"/>
+            <TextBlock Text="Знак зодиака" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="128,415,0,166"/>
+            <TextBlock Text="Образование" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="128,455,0,120"/>
+            <TextBlock Text="Страна" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="457,135,0,440"/>
+            <TextBlock Text="Город" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="457,175,0,403"/>
+            <TextBlock Text="Дети" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="457,255,0,320"/>
+            <TextBlock Text="Статус" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="457,215,0,364"/>
+            <TextBlock Text="Описание" HorizontalAlignment="Left" FontSize="15" Foreground="#54525D" FontWeight="Bold" Margin="457,335,0,247"/>
+
+            <TextBox x:Name="Surname" Margin="260,130,565,439" Width="175" Height="23" Background="#F6E9EA"  />
+            <TextBox x:Name="Name" Margin="260,170,565,400" Width="175" Height="23" Background="#F6E9EA" />
+            <TextBox x:Name="Patronymic" Margin="260,210,565,360" Width="175" Height="23" Background="#F6E9EA" />
+            <TextBox x:Name="Birthday" Margin="260,250,565,320" Width="175" Height="23" Background="#F6E9EA"/>
+            <TextBox x:Name="Gender" Margin="260,290,565,285" Width="175" Height="23" Background="#F6E9EA" />
+            <TextBox x:Name="Height" Margin="260,330,565,240" Width="175" Height="23" Background="#F6E9EA"/>
+            <TextBox x:Name="Weight" Margin="260,370,565,200" Width="175" Height="23" Background="#F6E9EA"/>
+            <TextBox x:Name="ZodiacSign" Margin="260,415,565,162" Width="175" Height="23" Background="#F6E9EA">
+            </TextBox>
+            <TextBox x:Name="Education" Margin="260,450,565,125" Width="175"  Height="23" Background="#F6E9EA"/>
+            <TextBox x:Name="Country" Margin="523,135,302,442" Width="175" Height="23" Background="#F6E9EA" />
+            <TextBox x:Name="City" Margin="523,173,302,404" Width="175" Background="#F6E9EA"/>
+            <CheckBox x:Name="Children" Margin="523,260,460,324" Background="#F6E9EA" BorderBrush="#C9A0DC" Checked="Children_Checked"/>
+            <ComboBox x:Name="Status" Margin="523,214,302,362" Width="175" Height="23" Background="#F6E9EA" BorderBrush="#C9A0DC"  ItemsSource="{Binding Statuses}" DisplayMemberPath="Title" SelectedValuePath="StatusId" SelectedValue="{Binding SelectedStatusID}"/>
+            <TextBox x:Name="Description" Margin="457,374,115,105" Background="#F6E9EA" />
+            <Button Content="Сохранить" Background="#7E3749" Foreground="White" FontSize="15" Margin="390,515,426,55" FontWeight="Bold" Click="RegistrButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>
+

@@ -1,0 +1,50 @@
+﻿<Page x:Class="Cupidon.View.ProfileDataAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cupidon.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="780" d:DesignWidth="856"
+      KeyDown="Window_KeyDown"
+      Background="White" Title="ProfileDataAdmin">
+    <ScrollViewer VerticalScrollBarVisibility="Hidden" >
+
+        <Grid Background="#90E1B4B6" Margin="40,40,40,40">
+        <Button x:Name="EditButton" Content="Редактировать" Background="#7E3749" Foreground="White" FontSize="15" FontWeight="Bold" Margin="124,540,501,105" Click="EditButton_Click" Height="55" VerticalAlignment="Top"/>
+        <Button x:Name="DeleteButton" Content="Удалить" Background="#7E3749" Foreground="White" FontSize="15" FontWeight="Bold" Margin="295,540,330,0" Click="DeleteButton_Click" Height="55" VerticalAlignment="Top"/>
+        <Button x:Name="BlockButton" Content="Чёрный список" Background="#7E3749" Foreground="White" FontSize="15" FontWeight="Bold" Margin="470,540,156,105" Click="BlockButton_Click" Height="55" VerticalAlignment="Top"/>
+
+        <TextBlock Text="ФИО"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,78,0,592" RenderTransformOrigin="1.396,0.7"></TextBlock>
+        <TextBlock Text="Дата рождения"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,129,0,541" RenderTransformOrigin="1.396,0.7" Width="130"></TextBlock>
+        <TextBlock Text="Пол"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="340,129,0,541" RenderTransformOrigin="1.396,0.7"/>
+        <TextBlock Text="Рост (см)"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,174,0,496" RenderTransformOrigin="1.396,0.7"/>
+
+
+        <TextBlock x:Name="SurnameTextBlock" HorizontalAlignment="Left" Margin="124,79,0,0" TextWrapping="Wrap" Text="{Binding Surname}" VerticalAlignment="Top" Height="30" Width="157" FontSize="15"/>
+        <TextBlock x:Name="NameTextBlock" HorizontalAlignment="Left" Margin="282,79,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Height="30" Width="156" FontSize="15"/>
+        <TextBlock x:Name="PatronymicTextBlock" HorizontalAlignment="Left" Margin="443,79,0,0" TextWrapping="Wrap" Text="{Binding Patronymic}" VerticalAlignment="Top" Height="30" Width="157" FontSize="15"/>
+            <TextBlock x:Name="DateOfBirthTextBlock" HorizontalAlignment="Left" Margin="150,129,0,0" TextWrapping="Wrap" Text="{Binding Birthday, StringFormat={}{0:dd.MM.yyyy}}" VerticalAlignment="Top" Height="26" Width="158" FontSize="15"/>
+        <TextBlock x:Name="GenderTextBlock" HorizontalAlignment="Left" Margin="406,124,0,0" TextWrapping="Wrap" Text="{Binding Gender}" VerticalAlignment="Top" Width="80" Height="30" FontSize="15"/>
+        <TextBlock x:Name="HeightTextBlock" HorizontalAlignment="Left" Margin="124,175,0,0" TextWrapping="Wrap" Text="{Binding Height}" VerticalAlignment="Top" Height="30" Width="158" FontSize="15"/>
+        <TextBlock x:Name="WeightTextBlock" HorizontalAlignment="Left" Margin="411,173,0,0" TextWrapping="Wrap" Text="{Binding Weight}" VerticalAlignment="Top" Height="30" Width="158" FontSize="15"/>
+        <TextBlock x:Name="CountryTextBlock" HorizontalAlignment="Left" Margin="124,225,0,0" TextWrapping="Wrap" Text="{Binding Country}" VerticalAlignment="Top" Height="30" Width="158" FontSize="15"/>
+        <TextBlock x:Name="CityTextBlock" HorizontalAlignment="Left" Margin="411,224,0,0" TextWrapping="Wrap" Text="{Binding City}" VerticalAlignment="Top" Height="30" Width="158" FontSize="15"/>
+            <TextBlock x:Name="ChildrenTextBlock" HorizontalAlignment="Left" Margin="124,275,0,0" TextWrapping="Wrap" Text="{Binding Children}" VerticalAlignment="Top" Width="158" Height="30" FontSize="15"/>
+            <TextBlock x:Name="ZodiacSignTextBlock" HorizontalAlignment="Left" Margin="124,322,0,0" TextWrapping="Wrap" Text="{Binding ZodiacSignId}" VerticalAlignment="Top" Width="158" Height="30" FontSize="15"/>
+            <TextBlock x:Name="EducationTextBlock" HorizontalAlignment="Left" Margin="124,375,0,0" TextWrapping="Wrap" Text="{Binding EducationId}" VerticalAlignment="Top" Width="314" Height="30" FontSize="15"/>
+            <TextBlock x:Name="StatusTextBlock" HorizontalAlignment="Left" Margin="406,274,0,0" TextWrapping="Wrap" Text="{Binding StatusId}" VerticalAlignment="Top" Height="26" Width="152" FontSize="15"/>
+            <TextBlock x:Name="DescriptionTextBlock" HorizontalAlignment="Left" Margin="124,424,0,0" TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Top" Height="76" Width="556" FontSize="15"/>
+            <TextBlock Margin="310,30,0,0" TextWrapping="Wrap" Text="Анкета претендента" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="18" Foreground="#7E3749" FontWeight="Bold" />
+        <TextBlock Text="Вес (кг)"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="340,174,0,496" RenderTransformOrigin="1.396,0.7"/>
+        <TextBlock Text="Страна"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,225,0,445" RenderTransformOrigin="1.396,0.7"/>
+        <TextBlock Text="Город"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="338,223,0,447" RenderTransformOrigin="1.396,0.7"/>
+        <TextBlock Text="Дети"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,275,0,395" RenderTransformOrigin="1.396,0.7"/>
+        <TextBlock Text="Описание"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,424,0,246" RenderTransformOrigin="1.396,0.7"/>
+            <TextBlock Text="Знак зодиака"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,320,0,350" RenderTransformOrigin="1.396,0.7"/>
+            <TextBlock Text="Описание"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,424,0,246" RenderTransformOrigin="1.396,0.7"/>
+            <TextBlock Text="Образование"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="10,374,0,296" RenderTransformOrigin="1.396,0.7"/>
+            <TextBlock Text="Статус"  HorizontalAlignment="Left" FontWeight="Bold" FontSize="15" Margin="340,275,0,395" RenderTransformOrigin="1.396,0.7"/>
+        </Grid>
+    </ScrollViewer>
+</Page>

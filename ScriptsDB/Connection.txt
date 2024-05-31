@@ -1,0 +1,11 @@
+﻿Data Source=DESKTOP-2250EVR\SQLEXPRESS;Initial Catalog=acquaintances;Integrated Security=True;Trust Server Certificate=True
+
+
+
+Логин и пароль админа:
+admin001
+$NR5v#QR
+
+Логин и пароль пользователя:
+ivanov23@mail.ru
+sWPjL8zOu!
